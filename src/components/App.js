@@ -4,10 +4,12 @@ import options from '../data/data.json'
 import './App.css';
 import Menu from "./Menu/Menu";
 
+// Statefull component
 class App extends Component {
     constructor(...props) {
         super(...props);
 
+        // Set state from json
         this.state = {
             options: options
         }
@@ -23,7 +25,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
 };
 
