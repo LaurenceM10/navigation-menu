@@ -29,6 +29,4 @@ App.propTypes = {
     name: PropTypes.string.isRequired
 };
 
-App.defaultProps = {};
-
 export default App;
