@@ -7,7 +7,7 @@ const Menu = props => (
             <ul>
                 {
                     props.options.map(item => (
-                        <MenuItem options={item}/>
+                        <MenuItem options={item} onClickItem={props.onClickItem}/>
                     ))
                 }
             </ul>

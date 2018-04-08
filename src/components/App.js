@@ -4,7 +4,7 @@ import options from '../data/data.json'
 import './App.css';
 import Menu from "./Menu/Menu";
 
-// Statefull component
+//Statefull component
 class App extends Component {
     constructor(...props) {
         super(...props);
@@ -13,12 +13,18 @@ class App extends Component {
         this.state = {
             options: options
         }
+
+        this.onClickItem = this.onClickItem.bind(this);
+    }
+
+    onClickItem(){
+        alert("Item clicked");
     }
 
     render() {
         return (
             <div>
-                <Menu options={this.state.options}/>
+                <Menu options={this.state.options} onClickItem={this.onClickItem()}/>
             </div>
         );
     }
